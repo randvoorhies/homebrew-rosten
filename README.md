@@ -4,3 +4,12 @@ Homebrew formulae for Edward Rosten's ([https://github.com/edrosten](https://git
 ## To use: ##
 
 `brew tap randvoorhies/rosten` and then `brew install <formula>`
+
+For example:
+
+`brew install TooN`
+
+`brew install gvars`
+
+`brew install libcvd`
+
