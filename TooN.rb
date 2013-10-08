@@ -2,19 +2,16 @@ require 'formula'
 
 class Toon < Formula
   homepage ''
-  url 'https://github.com/edrosten/TooN/tree/TOON_2.1'
-  sha1 'fee0814178a87c2cc90a7fea823161bbf29d3cf9'
+  url 'https://github.com/edrosten/TooN/archive/TOON_2.1.zip'
+  sha1 'f1bc7c2e841c75f590e926cd43dcc76f9bfe4e47'
   head 'https://github.com/edrosten/TooN.git'
-  version "2.1"
 
   def install
-    cd 'TOON_2.1' do
-      system "./configure", "--disable-debug",
-                            "--disable-dependency-tracking",
-                            "--disable-silent-rules",
-                            "--prefix=#{prefix}"
-      system "make", "install" # if this fails, try separate make/make install steps
-    end
+    system "./configure", "--disable-debug",
+      "--disable-dependency-tracking",
+      "--disable-silent-rules",
+      "--prefix=#{prefix}"
+    system "make", "install" # if this fails, try separate make/make install steps
   end
 
 end
