@@ -21,7 +21,7 @@ class Libcvd < Formula
   end
 
   def ffmpegflags
-    build.without?('ffmpeg') ? '--without-ffmpeg' : ''
+    build.without?('ffmpeg') ? '--without-ffmpeg' : '--enable-gpl'
   end
 
   def libpngflags
