@@ -11,6 +11,8 @@ class Gvars < Formula
   depends_on 'fltk' => :optional
   depends_on 'readline'
 
+  option :universal
+
   def x11flags
     build.with?('x11') ? '--with-x' : ''
   end
@@ -24,6 +26,7 @@ class Gvars < Formula
   end
 
   def install
+    ENV.universal_binary if build.universal?
     system "./configure", "--prefix=#{prefix}", x11flags, toonflags, fltkflags
     system "make", "install"
   end
